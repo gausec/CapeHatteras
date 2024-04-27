@@ -30,5 +30,26 @@ geom_col(
   colour = "white") + # outline color
 geom_line(
     colour = "black") + 
-theme_minimal() # A simple theme with no background or lines.
+theme_minimal() + # A simple theme 
+labs(y = "Total count of red knots", x = "Day in May of 2018") # Labeling the x & y axes
 ```
+&nbsp; Output:
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_bar.png?raw=true)
+&nbsp; 3.2 Jitter Plot
+```{r}
+# Keep months in right order
+Districts$Month<-factor(Districts$Month,levels = unique(Districts$Month),ordered = T)
+```
+```{r}
+district_select <- Districts[Districts$District %in% c("Bodie", "Hatteras", "Ocracoke"), ]
+
+ggplot(district_select, aes(Month, REKN)) +
+geom_jitter(aes(col=District, size=REKN)) +
+theme_minimal() +
+labs( y = "Total count of red knots",
+      x = "Day in May of 2018",
+      title = "2018 Red Knot Data at Cape Hatteras National Seashore",
+      size="Red knots" ) # Labeling the axes, title, and legend
+```
+&nbsp; Output:
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter.png?raw=true)
