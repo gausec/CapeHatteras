@@ -16,7 +16,18 @@ strand.spec<-read.csv("seaturtle.csv", header = TRUE)
 ```
 &nbsp;
 ##### 3. Using ggplot2 to plot the data
-&nbsp; 3.1 Using the `geom_jitter` plot
+&nbsp; 3.1 Using the `geom_jitter` plot, I plotted the total number of strandings per year and let the species-specific number of strandings corrospond to point size. Color cooresponds to species.
 ```{r}
- ggplot(strand.spec, aes(Species, SpeciesTotal)) + geom_jitter(aes(col=Year, size=StrandingYearTotal, )) + theme_linedraw() + labs(y = "Species-specific totals", x = "Year") 
+ ggplot(strand.spec, aes(Species, SpeciesTotal)) +
+       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
+       theme_linedraw() +
+       labs(y = "Species-specific totals", x = "Year") 
+```
+
+&nbsp; 3.2 A variation of the jitter plot where color corresponds to year and the Y-axis is the species.
+```{r}
+ ggplot(strand.spec, aes(Species, SpeciesTotal)) +
+       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
+       theme_linedraw() +
+       labs(y = "Species-specific totals", x = "Year")
 ```
