@@ -23,6 +23,9 @@ strand.spec<-read.csv("seaturtle.csv", header = TRUE)
        theme_linedraw() +
        labs(y = "Species-specific totals", x = "Year") 
 ```
+&nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/Strandings.png?raw=true)
 
 &nbsp; 3.2 A variation of the jitter plot where color corresponds to year and the Y-axis is the species.
 ```{r}
