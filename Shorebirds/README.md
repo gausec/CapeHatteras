@@ -33,8 +33,10 @@ geom_line(
 theme_minimal() + # A simple theme 
 labs(y = "Total count of red knots", x = "Day in May of 2018") # Labeling the x & y axes
 ```
-&nbsp; Output:
+&nbsp; **Output:**
+
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_bar.png?raw=true)
+
 &nbsp; 3.2 Jitter Plot
 ```{r}
 # Keep months in right order
@@ -51,5 +53,8 @@ labs( y = "Total count of red knots",
       title = "2018 Red Knot Data at Cape Hatteras National Seashore",
       size="Red knots" ) # Labeling the axes, title, and legend
 ```
-&nbsp; Output:
+
+&nbsp; **Output:**
+
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter.png?raw=true)
+
