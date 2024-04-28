@@ -41,7 +41,7 @@ labs(y = "Total count of red knots", x = "Day in May of 2018") # Labeling the x 
 ```{r}
 # Keep months in right order
 Districts$Month<-factor(Districts$Month,levels = unique(Districts$Month),ordered = T)
-```
+``` 
 ```{r}
 district_select <- Districts[Districts$District %in% c("Bodie", "Hatteras", "Ocracoke"), ]
 
