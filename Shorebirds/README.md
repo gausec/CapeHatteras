@@ -73,6 +73,6 @@ labs( y = "Total count of red knots",
 
 &nbsp; **Output:**
 
-![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter_lm.png?raw=true)
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter_trendline.png?raw=true)
 
 
