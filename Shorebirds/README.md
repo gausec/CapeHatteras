@@ -58,7 +58,7 @@ labs( y = "Total count of red knots",
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter.png?raw=true)
 
-&nbsp; 3.2 Adding a linear trend line using the `lm()` function
+&nbsp; 3.2 Adding a linear trend line using the `geom_smooth` [function](https://ggplot2.tidyverse.org/reference/geom_smooth.html)
 
 ```{r}
 ggplot(district_select, aes(Month, REKN)) +
@@ -72,3 +72,7 @@ labs( y = "Total count of red knots",
 ```
 
 &nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter_lm.png?raw=true)
+
+
