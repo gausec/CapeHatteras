@@ -13,6 +13,7 @@ OI<- read.csv("ocracoke_AMOY.csv", header=TRUE)
 REKN<- as.data.frame(read.csv("REKN.csv", header = TRUE))
 Districts<-as.data.frame(read.csv("2023REKN.csv", header=TRUE))
 YearTotals<-as.data.frame(read.csv("YearTotals.csv", header = TRUE))
+CWB<-as.data.frame(read.csv("cwb.csv", header = TRUE))
 ```
 &nbsp;
 ##### 3. Using ggplot2 to plot the data
@@ -75,4 +76,34 @@ labs( y = "Total count of red knots",
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter_trendline.png?raw=true)
 
+&nbsp; 3.3 Colonial waterbird nesting 2010-2018
+```{r}
+CWBplot<-ggplot(CWB, aes(x=Year, y=Nests)) + 
+  geom_line(aes(group=Species, 
+                linetype = Species, 
+                color=Species), 
+            size=1) +
+  theme_minimal() + 
+  labs(y = "Nests", 
+       x = "Year",
+       caption = " Nests observed during peak surveys between 2010-2018 at Cape Hatteras National Seashore ") +
+  scale_color_manual(name='Species', 
+                     labels=c('BLSK'='Black Skimmer',
+                              'COTE'= 'Common Tern', 
+                              'GBTE'='Gull-billed Tern', 
+                              'LETE'='Least Tern'), 
+                     values=c('BLSK'='#3A7EA8', 
+                              'COTE'='#7EE06E', 
+                              'GBTE'='#D2C24A', 
+                              'LETE'='#DD5733'), )  +
+  guides(color = guide_legend(override.aes = list(linetype = c(1,
+                                                               3,
+                                                               6,
+                                                               4) ) ) )
+
+```
+
+&nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/CWB.png?raw=true)
 
