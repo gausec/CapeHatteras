@@ -68,7 +68,7 @@ labs( y = "Total count of red knots",
       x = "Day in May of 2018",
       title = "2018 Red Knot Data at Cape Hatteras National Seashore",
       size="Red knots" )+ # Labeling the axes, title, and legend
-      geom_smooth(method = "lm", stat = "smooth") 
+      geom_smooth(method = "lm", stat = "smooth") # To remove confidence interval around smooth, use se = FALSE
 ```
 
 &nbsp; **Output:**
