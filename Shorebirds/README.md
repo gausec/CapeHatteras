@@ -58,3 +58,17 @@ labs( y = "Total count of red knots",
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/REKN_jitter.png?raw=true)
 
+&nbsp; 3.2 Adding a linear trend line using the `lm()` function
+
+```{r}
+ggplot(district_select, aes(Month, REKN)) +
+geom_jitter(aes(col=District, size=REKN)) +
+theme_minimal() +
+labs( y = "Total count of red knots",
+      x = "Day in May of 2018",
+      title = "2018 Red Knot Data at Cape Hatteras National Seashore",
+      size="Red knots" )+ # Labeling the axes, title, and legend
+      geom_smooth(method = "lm", stat = "smooth") 
+```
+
+&nbsp; **Output:**
