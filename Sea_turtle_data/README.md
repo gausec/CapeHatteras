@@ -1,5 +1,5 @@
-# Sea turtle data visualization
-### Data is sourced from publicly available [field reports](https://www.nps.gov/caha/learn/nature/upload/2018_CAHA_Sea-turtle-report_final_report.pdf). Figures are made using R.
+# Sea turtle data visualization using R
+### Data is sourced from publicly available [field reports](https://www.nps.gov/caha/learn/nature/upload/2018_CAHA_Sea-turtle-report_final_report.pdf).
 
 ---
 &nbsp;
