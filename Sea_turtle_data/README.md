@@ -34,3 +34,27 @@ strand.spec<-read.csv("seaturtle.csv", header = TRUE)
        theme_linedraw() +
        labs(y = "Species-specific totals", x = "Year")
 ```
+
+&nbsp; 3.3 Stacked bar plot where color corresponds to species and the Y-axis is the year.
+```{r}
+#Turtlesnocc <-
+  ggplot(YearTurtle, aes(x = Year, y = Count, fill = Species.of.Sea.Turtle)) + 
+  geom_bar(stat = "identity", color = "black") +
+  
+  scale_x_continuous(breaks=seq(2004,2024,by=1))+
+  
+   scale_y_continuous(breaks = seq(0, 50, by = 2))+
+  theme_minimal()+
+  labs(y = "Total Nests", 
+       x = "Year",
+       title = "Uncommon Sea Turtle Species Nesting at Cape Hatteras National Seashore",)+
+  theme(plot.title = element_text(hjust = .3, vjust = 2.5, size = 18), axis.text = element_text(size=13), axis.title = element_text(size=14), axis.title.x = element_text(margin=margin(t=25)), axis.title.y = element_text(margin=margin(t=25) ))+
+scale_fill_manual(values = c("#A9E190", "#FFB000", "#648FFF", "black"))
+
+ 
+
+#ggsave("Turtles-nocc.png", plot = Turtlesnocc, width = 15, height = 8, dpi = 500)
+```
+&nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/uncommon_sea_turtles_at_CAHA.png)
