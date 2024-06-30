@@ -16,26 +16,7 @@ strand.spec<-read.csv("seaturtle.csv", header = TRUE)
 ```
 &nbsp;
 ##### 3. Using ggplot2 to plot the data
-&nbsp; 3.1 Using the `geom_jitter` plot, I plotted the total number of strandings per year and let the species-specific number of strandings correspond to point size. Color corresponds to species.
-```{r}
- ggplot(strand.spec, aes(Species, SpeciesTotal)) +
-       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
-       theme_linedraw() +
-       labs(y = "Species-specific totals", x = "Year") 
-```
-&nbsp; **Output:**
-
-![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/Strandings.png?raw=true)
-
-&nbsp; 3.2 A variation of the jitter plot where color corresponds to year and the Y-axis is the species.
-```{r}
- ggplot(strand.spec, aes(Species, SpeciesTotal)) +
-       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
-       theme_linedraw() +
-       labs(y = "Species-specific totals", x = "Year")
-```
-
-&nbsp; 3.3 Stacked bar plot where color corresponds to species and the Y-axis is the year.
+&nbsp; 3.1 Stacked bar plot where color corresponds to species and the Y-axis is the year.
 ```{r}
 #Turtlesnocc <-
   ggplot(YearTurtle, aes(x = Year, y = Count, fill = Species.of.Sea.Turtle)) + 
@@ -56,5 +37,29 @@ scale_fill_manual(values = c("#A9E190", "#FFB000", "#648FFF", "black"))
 #ggsave("Turtles-nocc.png", plot = Turtlesnocc, width = 15, height = 8, dpi = 500)
 ```
 &nbsp; **Output:**
-
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/uncommon_sea_turtles_at_CAHA.png)
+
+&nbsp;
+
+&nbsp; 3.2 Using the `geom_jitter` plot, I plotted the total number of strandings per year and let the species-specific number of strandings correspond to point size. Color corresponds to species.
+```{r}
+ ggplot(strand.spec, aes(Species, SpeciesTotal)) +
+       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
+       theme_linedraw() +
+       labs(y = "Species-specific totals", x = "Year") 
+```
+&nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/Strandings.png?raw=true)
+
+&nbsp;
+
+&nbsp; 3.3 A variation of the jitter plot where color corresponds to year and the Y-axis is the species.
+```{r}
+ ggplot(strand.spec, aes(Species, SpeciesTotal)) +
+       geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
+       theme_linedraw() +
+       labs(y = "Species-specific totals", x = "Year")
+```
+
+
