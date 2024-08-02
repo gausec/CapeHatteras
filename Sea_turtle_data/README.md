@@ -42,7 +42,7 @@ scale_fill_manual(values = c("#A9E190", "#FFB000", "#648FFF", "black"))
 
 &nbsp;
 
-&nbsp; 3.2 Using the `geom_jitter` plot, I plotted the total number of strandings per year and let the species-specific number of strandings correspond to point size. Color corresponds to species.
+&nbsp; 3.2 Using the `geom_jitter` plot, I plotted the total number of strandings per year. The size of a dot represents the total number of strandings in a given year. Color corresponds to species.
 ```{r}
  ggplot(strand.spec, aes(Species, SpeciesTotal)) +
        geom_jitter(aes(col=Year, size=StrandingYearTotal, )) +
