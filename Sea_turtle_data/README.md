@@ -5,7 +5,7 @@
 &nbsp;
 ##### 1. Library
 ```{r}
-library(ggplot2)
+library(ggplot2) 
 ```
 &nbsp;
 ##### 2. Data
@@ -39,6 +39,7 @@ scale_fill_manual(values = c("#A9E190", "#FFB000", "#648FFF", "black"))
 &nbsp; **Output:**
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/uncommon_sea_turtles_at_CAHA.png)
 *Note: Legend was added post-plotting*
+
 &nbsp;
 
 &nbsp; 3.2 Using the `geom_jitter` plot, I plotted the total number of strandings per year and let the species-specific number of strandings correspond to point size. Color corresponds to species.
