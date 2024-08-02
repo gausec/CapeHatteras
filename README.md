@@ -12,6 +12,4 @@
 2. Sea_turtle_data: R script written by Carol Gause 
 3. Shorebirds: R script written by Carol Gause
 
-&nbsp;
-### Contributors:
-- Carol A. Gause
+
