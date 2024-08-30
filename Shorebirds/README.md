@@ -126,8 +126,11 @@ PeakNestsCWB-CAHA <-
        title = "Nests observed during peak surveys between 2007-2022 at Cape Hatteras National Seashore") +
   theme(plot.title = element_text(hjust = .3, vjust = 4, size = 12), axis.text = element_text(size=18))
 ggsave("PeakNestsCWB-CAHA.png", plot = PeakNestsCWB-CAHA, width = 15, height = 10, dpi = 300)
+
 ```
 
 &nbsp; **Output:**
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/PeakNestsCWB-CAHA.png?raw=true)
+
+*Note: Finishing touches (outline, text color) were added outside of R Studio.*
