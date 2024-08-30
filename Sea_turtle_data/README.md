@@ -38,7 +38,7 @@ scale_fill_manual(values = c("#A9E190", "#FFB000", "#648FFF", "black"))
 ```
 &nbsp; **Output:**
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/uncommon_sea_turtles_at_CAHA.png)
-*Note: Legend was added post-plotting*
+*Note: Legend was added outside of R Studio.*
 
 &nbsp;
 
