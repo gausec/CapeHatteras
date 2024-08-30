@@ -107,3 +107,27 @@ CWBplot<-ggplot(CWB, aes(x=Year, y=Nests)) +
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/CWB.png?raw=true)
 
+
+&nbsp; 3.4 Colonial waterbird nesting 2007-2023
+```{r}
+CWB0723<-as.data.frame(read.csv("CWB07-23.csv", header = TRUE))
+CWB0723$Year<-factor(CWB0723$Year,levels = unique(CWB0723$Year),ordered = T)
+
+PeakNestsCWB-CAHA <-
+  ggplot(CWB0723, aes(x=Year, y=Nests)) + 
+  geom_line((aes(group=Species, 
+                linetype = Species, 
+                color=Species)), 
+            size =1, 
+            show.legend = T ) +
+  theme_minimal() + 
+  labs(y = "Nests", 
+       x = "Year",
+       title = "Nests observed during peak surveys between 2007-2022 at Cape Hatteras National Seashore") +
+  theme(plot.title = element_text(hjust = .3, vjust = 4, size = 12), axis.text = element_text(size=18))
+ggsave("PeakNestsCWB-CAHA.png", plot = PeakNestsCWB-CAHA, width = 15, height = 10, dpi = 300)
+```
+
+&nbsp; **Output:**
+
+![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/PeakNestsCWB-CAHA.png?raw=true)
