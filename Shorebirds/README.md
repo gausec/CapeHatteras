@@ -133,4 +133,4 @@ ggsave("PeakNestsCWB-CAHA.png", plot = PeakNestsCWB-CAHA, width = 15, height = 1
 
 ![alt text](https://github.com/gausec/CapeHatteras/blob/main/Results/PeakNestsCWB-CAHA.png?raw=true)
 
-*Note: Finishing touches (outline, text color) were added outside of R Studio.*
+*Note: Outline around legend was added outside of R Studio.*
