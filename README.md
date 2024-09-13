@@ -9,7 +9,7 @@
 
 ### Repo Contents:
 1. Results: Plots & figures
-2. Sea_turtle_data: R script written by Carol Gause 
-3. Shorebirds: R script written by Carol Gause
+2. Sea_turtle_data: Annotated R script used for generating sea turtle nesting figures, written by Carol Gause.
+3. Shorebirds: Annotated R script used for generating figures related to shorebird surveys, written by Carol Gause.
 
 
